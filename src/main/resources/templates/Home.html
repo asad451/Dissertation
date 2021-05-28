@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Payment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/loginstyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Sheffield Air</a>
+
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="https://airline-payment.herokuapp.com/">Logout</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+  </ul>
+
+</nav>
+
+<div class="container-fluid aa">
+  <div class="row">
+  <div class="pdf">
+    <h1 class="it2">Itinerary</h1>
+    <img class="imag" src="https://image.flaticon.com/icons/svg/1243/1243550.svg">
+    <br>
+    <a href="Itinerary.pdf" class="it1">Your Itinerary</a>
+    <p class="descript">Your Itinerary will be mailed to you! Please enter the E-mail ID where you want your Itinerary</p>
+   
+  </div>
+    <div class="headd">
+      <form action="paynow" method="POST">
+        <input type="text" th:value="${user_name}" name="user__name" hidden="true">
+          <input type="email" class="email_input modal-input" placeholder="johndoe@example.com" name="e_mail" required="true"><br><br>
+        <button class="btn btn-primary payment">Pay Now</button><br><br>  
+      </form>
+
+
+      <form action="authorize_payment" method="POST">
+        <input type="text" name="product" value="ticket" hidden="true">
+        <input type="text" name="subtotal" value="40" hidden="true">
+        <input type="text" name="tax" value="10" hidden="true">
+        <input type="text" name="total" value="50" hidden="true">
+        <button class="btn btn-dark paypalBtn"><img src="https://icons-for-free.com/iconfiles/png/512/finance+money+pay+payment+paypal+icon-1320086082799997084.png" alt="paypal" height="30" width="30">Checkout with PayPal</button>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<br><br>
+  
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+.modal-input {
+  border: none;
+  width: 12pc;
+  border-radius: 0;
+  background: none;
+  border-bottom: 1px solid gray;
+  margin-top: 2pc;
+  margin-left: 1.5pc;
+}
+.modal-input:focus { 
+    outline: none;
+}
+.modal-form {
+  text-align: center;
+}
+.btnn {
+  color: white;
+  text-decoration: none;
+  padding: 30px;
+
+}
+.btnn:active {
+  text-decoration: none;
+  color:white;
+}
+.btnn:hover {
+  text-decoration: none;
+  color:white;
+}
+.aa {
+  height: 90vh;
+  min-height: 450px;
+  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  overflow:auto;
+}
+.pdf {
+  margin-top: 2%;
+  margin-left: 45%;
+}
+
+.imag {
+  margin-left: -15px;
+  margin-top: 10%;
+  height: 55%;
+  width: 30%;
+  border-radius: 4px;
+}
+
+.descript {
+  margin-left: -238px;
+}
+
+.headd {
+  margin-top: 7%;
+  margin-left: 46%;
+}
+
+.done {
+  text-align: center;
+  width: 100%;
+}
+
+.done1 {
+  margin-top: 60px;
+  text-align: center;
+  width: 100%;
+}
+
+.tick {
+  margin-top: 59px;
+  margin-left: 450px;
+  text-align: center;
+  width: 22%;
+}
+
+.paypalBtn {
+  margin-left: -30px;
+}
+
+.payment {
+  margin-left: 27px;
+}
+
+.it1 {
+  margin-left: 30px;
+}
+
+.it2 {
+      font-size: 3.5rem;
+    font-family: auto
+}
+
+.email_input {
+  margin-left: -27px;
+}
+
+.warning {
+  margin-top: 90px;
+  margin-left: 450px;
+  text-align: center;
+  width: 22%;
+}
+
+.warn-button {
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered3 {
+  position: absolute;
+  top: 62%;
+  left: 48%;
+}
+
+.centered2 {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

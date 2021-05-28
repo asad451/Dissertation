@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Payment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/loginstyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Sheffield Air</a>
+
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="https://airline-payment.herokuapp.com/">Home</a>
+    </li>
+  </ul>
+
+</nav>
+
+<div>
+  <img src="https://wallpaperset.com/w/full/9/f/d/501146.jpg" alt="Nature" style="width:100%;">
+  <div class="centered2">
+    <h2 align="center" class="it2">Payment</h2>
+  </div>
+  <div class="centered">
+    <button type="button" class="btn btn-primary" style="margin-right: 30px;" data-toggle="modal" data-target="#loginModal">Login</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">SignUp</button>
+  </div>
+</div>
+
+
+<span class="centered" style="margin-top: 100px; font-weight: bold;" th:text="${message}"></span>
+
+<!-- Login Modal -->
+<div class="modal" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body modal-form">
+        <form action="login" method="POST">
+          <label>Enter Username: </label><input placeholder="Username" name="uname" class="modal-input" required="true"><br>
+          <label>Enter Password: </label><input placeholder="Password" type="Password" name="password" class="modal-input" required="true"><br>
+          <label>Verification Code:</label><input placeholder="code" class="modal-input" name='code'/><br><br><br>
+          <button class="btn btn-info">Submit</button><br>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Signup Modal -->
+<div class="modal" id="signupModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Sign Up</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body modal-form">
+        <form action="signup" method="POST">
+          <label>Enter Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input placeholder="Name" name="fname" class="modal-input" required="true"><br>
+          <label>Enter Username: </label><input placeholder="Username" name="uname" class="modal-input" required="true"><br>
+          <label>Enter Password: </label><input placeholder="Password" type="Password" name="password" class="modal-input" required="true"><br>
+          <label>Enter Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input placeholder="abc@example.com" type="email" class="modal-input" name="mfa_email" required="true"><br><br><br>
+          <button class="btn btn-info">Submit</button><br>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+  
+
+</body>
+</html>
